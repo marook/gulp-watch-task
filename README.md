@@ -13,8 +13,9 @@ the gulp-connect browser after all builds are done.
 
 Use gulp-watch-task in your gulpfile.js like the following:
 
+    var connect = require('gulp-connect');
     var gulp = require('gulp');
-    var watchTask = require('gulp-watch-task');
+    var watchTask = require('gulp-watch-task').env(gulp, connect);
 
     gulp.task('default', ['allWatches']);
 
