@@ -1,5 +1,7 @@
 # gulp-watch-task
 
+Define atomic gulp build tasks to just rebuild what has changed.
+
 1. Introduction
 1. Usage
 
