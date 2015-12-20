@@ -1,0 +1,27 @@
+{
+    "name": "gulp-watch-task",
+    "version": "0.1.0",
+    "license": "LGPL-3.0",
+
+    "homepage": "https://github.com/marook/gulp-watch-task",
+    "bugs": {
+        "url": "https://github.com/marook/gulp-watch-task/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marook/gulp-watch-task"
+    },
+
+    "author": {
+        "name": "Markus Peröbner",
+        "email": "markus.peroebner@gmail.com"
+    },
+
+    "main": "main.js",
+    
+    "dependencies": {
+        "gulp": "3.9.0",
+        "gulp-connect": "2.2.0",
+        "gulp-util": "3.0.6"
+    }
+}
