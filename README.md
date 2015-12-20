@@ -15,7 +15,11 @@ Use gulp-watch-task in your gulpfile.js like the following:
 
     var connect = require('gulp-connect');
     var gulp = require('gulp');
-    var watchTask = require('gulp-watch-task').env(gulp, connect);
+    var watchTask = require('gulp-watch-task').env({
+        gulp: gulp,
+        connect: connect,
+        reloadPaths: ['path/to/my/*.html']
+    });
 
     gulp.task('default', ['allWatches']);
 

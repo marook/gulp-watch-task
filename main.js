@@ -1,4 +1,7 @@
-function env(gulp, connect, gutil){
+function env(opts){
+    var gulp = opts.gulp
+    var connect = opts.connect;
+    var gutil = opts.gutil;
 
     var watchTaskIds = [];
 
@@ -53,7 +56,7 @@ function env(gulp, connect, gutil){
         if(reloadBlocks === 0){
             gutil && gutil.log('Reloading...');
 
-            return gulp.src('target/www/**/*.html', { read: false })
+            return gulp.src(opts.reloadPaths, { read: false })
                 .pipe(connect.reload());
         }
     }
