@@ -56,8 +56,7 @@ function env(opts){
         if(reloadBlocks === 0){
             gutil && gutil.log('Reloading...');
 
-            return gulp.src(opts.reloadPaths, { read: false })
-                .pipe(connect.reload());
+            return opts.reload();
         }
     }
 
