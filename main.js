@@ -2,6 +2,7 @@ function env(opts){
     var gulp = opts.gulp
     var connect = opts.connect;
     var gutil = opts.gutil;
+    var watchOpts = opts.watchOpts;
 
     var watchTaskIds = [];
 
@@ -38,7 +39,13 @@ function env(opts){
          * This task registers the watch which triggers a rebuild.
          */
         gulp.task(watchTaskId, function(){
-            gulp.watch(srcPaths, [reloadTaskId]);
+            var watchArgs = [srcPaths,];
+            if(watchOpts){
+                watchArgs.push(watchOpts);
+            }
+            watchArgs.push([reloadTaskId]);
+
+            gulp.watch.apply(gulp, watchArgs);
         });
 
         watchTaskIds.push(watchTaskId);
